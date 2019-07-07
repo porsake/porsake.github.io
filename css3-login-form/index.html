@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<section class="form-section">
+    <div class="form">
+        <a href="#" class="form__link">
+            Вернуться
+        </a>
+		<div class="form__avatar" >
+		    <img src="img/avatar.png" alt="avatar">
+		</div>
+        <form id="myform" novalidate>
+        <div class="form__inner">
+            <input class="form__login" name="phone" id="phone" type="tel" maxlength="18"  required placeholder="Номер телефона">
+			<input class="form__pass" name="pass" type="password" minlength="5"  maxlength="8" placeholder="Пароль" required  title="минимально 5 символов">
+	    </div>
+		<div class="form__checkbox">
+            <input class="form__toggle-off" name="toggle" type="checkbox" id="toggle">
+            <label class="form__label" for="toggle">Запомнить</label>
+            <a href="#" class="form__recovery">Забыл пароль</a>
+        </div>
+        <div class="form__button">
+            <input class="form__btn" type="submit" value="Войти">
+        </div>    
+        </form>
+    </div>
+</section>
+</body>
+</html>
