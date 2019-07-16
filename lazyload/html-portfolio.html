@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HTML шаблон портфолио (Отложенная загрузка)</title>
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+
+.row,
+.row > .column {
+    padding: 8px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+ .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+}
+
+.content img {
+	width: 100%;
+	display: block;
+	background-image: url(data:image/gif;base64,R0lGODlhBgAIAIABAOTk5P///yH5BAEAAAEALAAAAAAGAAgAAAILhIN2CpjvWJBpvQIAOw==)
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+<section>
+<h1>LOGO.RU</h1>
+<hr>
+<h2>Портфолио фотографа</h2>
+<p>При уменьшении окна браузера, вы увидите, как работает адаптивность.</p>
+
+<div class="row">
+  <div class="column">
+    <div class="content">
+	  <a target="_blank"  href="mountains.jpg">
+      <img class="lazyload" src="data:image/gif;base64,R0lGODlhAwACAIAAAP///wAAACH5BAEAAAEALAAAAAADAAIAAAICjF8AOw==" data-src="mountains.jpg" alt="Mountains">
+	  </a>  
+      <h3>Крутая гора</h3>
+      <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет оценить значение существенных финансовых и административных условий.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+	<a target="_blank"  href="lights.jpg">
+    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAwACAIAAAP///wAAACH5BAEAAAEALAAAAAADAAIAAAICjF8AOw==" data-src="lights.jpg" alt="Lights">
+	</a>
+      <h3>Лувр ночью</h3>
+      <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет оценить значение существенных финансовых и административных условий.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+	<a target="_blank"  href="nature.jpg">
+    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAwACAIAAAP///wAAACH5BAEAAAEALAAAAAADAAIAAAICjF8AOw==" data-src="nature.jpg" alt="Nature">
+	</a>
+      <h3>Две бабочки</h3>
+      <p>Идейные соображения высшего порядка, а также консультация с широким активом позволяет оценить значение существенных финансовых и административных условий.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+	<a target="_blank"  href="face.jpg">
+    <img class="lazyload" src="data:image/gif;base64,R0lGODlhAwACAIAAAP///wAAACH5BAEAAAEALAAAAAADAAIAAAICjF8AOw==" data-src="face.jpg" alt="Face">
+	</a>
+      <h3>Женский облик</h3>
+      <p>Разнообразный и богатый опыт реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития. </p>
+    </div>
+  </div>
+</div>
+</section>
+
+<script src="js/lazyload.min.js"></script>
+
+<script>
+	var lazyLoadInstance = new LazyLoad({
+		elements_selector: ".lazyload"
+		// ... more custom settings?
+	});
+</script>
+
+</body>
+</html>
+
+
+
+
